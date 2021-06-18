@@ -67,26 +67,48 @@ class _HomeState extends State<Home> {
 
 
       body: Stack(children: [
-        Container(
-          color: Colors.yellow,
-          height: 100,
-          width: 100,
+        Align(
+            alignment: Alignment.bottomLeft,
+            child: Container(
+            color: Colors.yellow,
+            height: 100,
+            width: 100,
+          ),
         ),
-         Container(
-          color: Colors.red,
-          height: 100,
-          width: 100,
+         Align(
+           alignment: Alignment.bottomRight,
+
+            child: Container(
+            color: Colors.red,
+            height: 100,
+            width: 100,
         ),
-         Container(
-          color: Colors.green,
-          height: 100,
-          width: 100,
+         ),
+         Align(
+           alignment: Alignment.topRight,
+            child: Container(
+            color: Colors.green,
+            height: 100,
+            width: 100,
         ),
-         Container(
-          color: Colors.purple,
-          height: 100,
-          width: 100,
-        )
+         ),
+         Align(
+           alignment: Alignment.topLeft,
+           child: Container(
+            color: Colors.purple,
+            height: 100,
+            width: 100,
+        ),
+         ),
+          Positioned(
+            top:20,
+            left:40,
+              child: Container(
+              color: Colors.blueGrey,
+              height: 100,
+              width: 100,
+        ),
+          ),
 
       ],),
 
