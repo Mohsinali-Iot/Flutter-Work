@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app.dart';
+
 class Home extends StatefulWidget {
 
   @override
@@ -66,57 +68,113 @@ class _HomeState extends State<Home> {
 
 
 
-      body: Stack(children: [
-        Align(
-            alignment: Alignment.bottomLeft,
-            child: Container(
-            color: Colors.yellow,
-            height: 100,
-            width: 100,
-          ),
-        ),
-         Align(
-           alignment: Alignment.bottomRight,
+      // body: Stack(children: [
+      //   Align(
+      //       alignment: Alignment.bottomLeft,
+      //       child: Container(
+      //       color: Colors.yellow,
+      //       height: 100,
+      //       width: 100,
+      //     ),
+      //   ),
+      //    Align(
+      //      alignment: Alignment.bottomRight,
 
-            child: Container(
-            color: Colors.red,
-            height: 100,
-            width: 100,
-        ),
-         ),
-         Align(
-           alignment: Alignment.topRight,
-            child: Container(
-            color: Colors.green,
-            height: 100,
-            width: 100,
-        ),
-         ),
-         Align(
-           alignment: Alignment.topLeft,
-           child: Container(
-            color: Colors.purple,
-            height: 100,
-            width: 100,
-        ),
-         ),
-          Positioned(
-            top:20,
-            left:40,
-              child: Container(
-              color: Colors.blueGrey,
-              height: 100,
-              width: 100,
-        ),
-          ),
+      //       child: Container(
+      //       color: Colors.red,
+      //       height: 100,
+      //       width: 100,
+      //   ),
+      //    ),
+      //    Align(
+      //      alignment: Alignment.topRight,
+      //       child: Container(
+      //       color: Colors.green,
+      //       height: 100,
+      //       width: 100,
+      //   ),
+      //    ),
+      //    Align(
+      //      alignment: Alignment.topLeft,
+      //      child: Container(
+      //       color: Colors.purple,
+      //       height: 100,
+      //       width: 100,
+      //   ),
+      //    ),
+      //     Positioned(
+      //       top:20,
+      //       left:40,
+      //         child: Container(
+      //         color: Colors.blueGrey,
+      //         height: 100,
+      //         width: 100,
+      //   ),
+      //     ),
 
+      // ],),
+
+
+
+
+      // body: Center(
+      //   child: Container(
+      //     color: Colors.purple,
+      //     // height: MediaQuery.of(context).size.height,
+          
+      //     height: MediaQuery.of(context).size.height*0.5,
+      //     // width: MediaQuery.of(context).size.width,
+      //     width: MediaQuery.of(context).size.width*0.5,
+
+      //   ),
+      // ),
+
+
+      // body: Center(
+      //   child: ElevatedButton(
+      //     onPressed: (){
+      //       Navigator.push(context,
+      //       MaterialPageRoute(builder: (context)=>App()));
+      //     },
+      //     child: Text('Click'),
+      //     )
+      //     ),
+
+
+
+
+      body: Column(children: [
+        Abc(),
+        Abc(),
+        
       ],),
-
-
+      
 
 
 
       
     );
   }
+}
+
+
+Widget Abc(){
+  return(
+    ListTile(
+          leading: CircleAvatar
+          (backgroundColor: Colors.blueGrey,
+          radius: 20,
+          ),
+          title: Text("Ali"),
+          subtitle: Text("Hello"),
+          trailing: Column(children: [
+            Text('4:00 pm'),
+            CircleAvatar(
+              backgroundColor: Colors.green,
+              radius: 10,
+              )
+          ],),
+        )
+
+  );
 }
